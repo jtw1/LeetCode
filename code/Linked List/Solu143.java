@@ -13,6 +13,7 @@
  */
 class Solution {
     public void reorderList(ListNode head) {
+        //TC:O(n)  SC:O(1)
         if(head==null) return;
         ListNode mid = middleNode(head);  
         ListNode h=head,p=mid.next;  //将原链表分为两部分，第一部分以head开头，mid结尾，第二部分以mid.next开头
