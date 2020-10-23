@@ -63,5 +63,43 @@ public class Solu234 {
             slow=slow.next;
         }
         return true;
+        
+        /*法二.1
+        public boolean isPalindrome(ListNode head) {
+            if(head==null || head.next==null) return true;
+            ListNode middle=middleNode(head);
+            ListNode right=reverse(middle.next);
+            middle.next=null;
+            while(right!=null){
+                if(head.val!=right.val){
+                    return false;
+                }
+                head=head.next;
+                right=right.next;
+            }
+            return true;
+        }
+        //找到中间节点
+        public ListNode middleNode(ListNode head){
+            ListNode slow=head;
+            ListNode fast=head;
+            while(fast.next!=null && fast.next.next!=null){
+                slow=slow.next;
+                fast=fast.next.next;
+            }
+            return slow;
+        }
+        //翻转链表
+        public ListNode reverse(ListNode head){
+            ListNode pre=null;
+            ListNode cur=head;
+            while(cur!=null){
+                ListNode dummy=cur.next;
+                cur.next=pre;
+                pre=cur;
+                cur=dummy;
+            }
+            return pre;
+        }*/
     }
 }
