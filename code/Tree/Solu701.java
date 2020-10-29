@@ -35,7 +35,7 @@ public class Solu701 {
         return root;
     }
 }
-class TreeNode {
+public class TreeNode {
          int val;
          TreeNode left;
          TreeNode right;
