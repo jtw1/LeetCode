@@ -1,7 +1,7 @@
-[844] 比较含退格的字符串
+//[844] 比较含退格的字符串
 // https://leetcode-cn.com/problems/backspace-string-compare/submissions/
 
-class Solution {
+class Sol844 {
     public boolean backspaceCompare(String S, String T) {
         //双指针 TC：O(m+n)  SC:O(1)
         int i = S.length() - 1, j = T.length() - 1; //指向S和T末尾的指针，从后往前遍历

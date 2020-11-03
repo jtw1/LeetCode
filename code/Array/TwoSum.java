@@ -1,6 +1,9 @@
+import java.util.HashMap;
+import java.util.Map;
+
 //[1] 两数之和
 //https://leetcode-cn.com/problems/two-sum/
-class Solution {
+class Sol1 {
     public int[] twoSum(int[] nums, int target) {
         if(nums==null || nums.length==0) return new int[0];
         Map<Integer,Integer> map = new HashMap<>();

@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
 @Description [381] o(1)时间插入，删除，获取元素概率  （10.31每日一题）
 @date 2020/10/31-12:25
@@ -7,7 +9,7 @@ class Sol381 {
     List<Integer> nums;
 
     /** Initialize your data structure here. */
-    public RandomizedCollection() {
+    public void RandomizedCollection() {
         idx = new HashMap<Integer, Set<Integer>>();
         nums = new ArrayList<Integer>();
     }
