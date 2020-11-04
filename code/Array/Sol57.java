@@ -15,7 +15,8 @@ import java.util.List;
  */
 public class Sol57 {
     public int[][] insert(int[][] intervals, int[] newInterval){
-        //TC:O(n)   SC:O(1) 列表里存的是要返回的结果数组的地址，最后只不过是把列表存储改成数组存储了，里面存的地址还是那些返回数组
+        //TC:O(n)   SC:O(1)
+        // 列表里存的是要返回的结果数组的地址，最后只不过是把列表存储改成数组存储了，里面存的地址还是那些返回数组
         int left=newInterval[0];
         int right=newInterval[1];//要插入区间的左右端点
         boolean placed=false;  //记录newInterval是否添加的标志，true表示已添加，false表示未添加
