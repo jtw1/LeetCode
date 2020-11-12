@@ -12,6 +12,7 @@ public class Sol922 {
         }
     }
     public static int[] sortArrayByParityII(int[] A) {
+        //双指针  TC:O(n)  SC:O(1)
         if(A==null || A.length==0) return A;
         int odd=1;
         int len=A.length;
