@@ -1,4 +1,4 @@
-package TanXin;
+package GreedySelector;
 
 import java.util.Arrays;
 

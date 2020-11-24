@@ -29,11 +29,11 @@ public class Solu105 {
         if(left>right) return null;
 
         TreeNode root = new TreeNode(preorder[post_idx]);
-        int index = idx_map.get(root.val);
+        int index = idx_map.get(root.val);    //得到根节点在中序遍历中的下标
         post_idx++;
 
-        root.left = helper(left,index-1);
-        root.right = helper(index+1,right);
+        root.left = helper(left,index-1);   //递归得到左子树
+        root.right = helper(index+1,right);  //递归得到右子树
         return root;
     }
 }
