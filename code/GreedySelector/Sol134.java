@@ -1,4 +1,4 @@
-package TanXin;
+package GreedySelector;
 
 /**
  * @Description 加油站
