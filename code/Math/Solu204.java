@@ -1,18 +1,11 @@
-package LeetCodeTest;
-
 import java.util.Arrays;
 
 // [204] 计数质数
 // https://leetcode-cn.com/problems/count-primes/description/
 public class Solu204 {
     public int countPrimes(int n) {
-        // int count=0;
-        // while(n>0){
-        //     if(isPrime(n)) count++;
-        //     n--;
-        // }
-        // return count;
-
+        //埃氏筛
+        //TC:O(nlog(logn))   SC:O(n)
         boolean[] isPrim = new boolean[n];
         Arrays.fill(isPrim, true);
         for (int i = 2; i * i < n; i++){
