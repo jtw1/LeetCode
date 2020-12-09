@@ -9,8 +9,8 @@ class CQueue {
     private Deque<Integer> stack1;
     private Deque<Integer> stack2;
     public CQueue() {
-        stack1=new LinkedList<Integer>();
-        stack2=new LinkedList<Integer>();
+        stack1=new LinkedList<>();
+        stack2=new LinkedList<>();
     }
 
     /**
