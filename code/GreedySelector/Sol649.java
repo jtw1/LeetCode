@@ -31,7 +31,7 @@ public class Sol649 {
             int radiantIndex = radiant.poll(),direIndex=dire.poll();
             //如果radiant首元素较小，说明radiant方先行使权力，会禁言dire的首元素对应那位议员
             //因此将dire首元素永久弹出，并将radiant首元素弹出，增加n之后重新放回队列
-            // 这里增加n而不是增加剩余的议员人数，是为了保证在轮中议员的前后相对位置不变
+            // 这里增加n而不是增加剩余的议员人数，是为了保证在一轮中议员的前后相对位置不变
             if(radiantIndex<direIndex){
                 radiant.offer(radiantIndex+len);
             }else{
