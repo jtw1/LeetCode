@@ -51,7 +51,7 @@ package LeetCodeTest;
 //     //最后，为每个节点调用该递归方法。
 
 //     private void DFS(TreeNode root,int level,List<List<Integer>> res){
-//         //level>res.size()时，表示到了新的一层，此时需要创建一个双端队列来添加该层的节点
+//         //level>=res.size()时，表示到了新的一层，此时需要创建一个双端队列来添加该层的节点
 //         if(level>=res.size()){
 //             LinkedList<Integer> newlevel = new LinkedList<>();
 //             newlevel.add(root.val);
