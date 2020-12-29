@@ -9,14 +9,16 @@ public class Sol188 {
     public int maxProfit(int k, int[] prices) {
         if(prices==null || prices.length<2) return 0;
         int len=prices.length;
+        //当k非常大时转为无限次交易
         if(k>len/2){
-            int dp0=0,dp1=-prices[0];
+            int dp0=0,dp1=-prices[0];  //dp0:手上无股票时，持有的现金数   dp1:手上有股票时，持有的现金数
             for (int i = 1; i < len; i++) {
                 dp0=Math.max(dp0,dp1+prices[i]);
                 dp1=Math.max(dp1,dp0-prices[i]);
             }
             return Math.max(dp0,dp1);
         }
+        //定义二维数组，交易了多少次、当前的买卖状态
         int[][] dp=new int[k+1][2];
         for (int i = 0; i <= k; i++) {
             dp[i][0]=0;
