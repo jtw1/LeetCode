@@ -29,6 +29,7 @@
       <sourceFolder url="file://$MODULE_DIR$/code/力扣周赛" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/笔试题·" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/Monotonous Stack" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/design" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
