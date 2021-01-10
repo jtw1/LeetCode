@@ -29,6 +29,6 @@ public class Sol123 {
             dp3=Math.max(dp3,dp2-prices[i]);
             dp4=Math.max(dp4,dp3+prices[i]);
         }
-        return Math.max(0,Math.max(Math.max(dp1,dp2),Math.max(dp3,dp4)));
+        return dp4;
     }
 }

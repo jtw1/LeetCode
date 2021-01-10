@@ -7,7 +7,7 @@ import java.util.Map;
  * https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
  * @date 2020/12/25 0025-10:27
  */
-public class Sol17 {
+public class So17 {
     static final Map<Character, String> map = Map.of(
             '2', "abc", '3', "def", '4', "ghi", '5', "jkl",
             '6', "mno", '7', "pqrs", '8', "tuv", '9', "wxyz"
