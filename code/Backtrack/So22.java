@@ -7,7 +7,7 @@ import java.util.List;
  * https://leetcode-cn.com/problems/generate-parentheses/
  * @date 2020/12/29 0029-9:29
  */
-public class Sol22 {
+public class So22 {
     public static void main(String[] args) {
         List<String> res=generateParenthesis(3);
         System.out.println(res);
