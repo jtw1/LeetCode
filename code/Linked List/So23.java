@@ -3,7 +3,7 @@
  * https://leetcode-cn.com/problems/merge-k-sorted-lists/
  * @date 2021/1/3-16:09
  */
-public class Sol23 {
+public class So23 {
     //TC:O(kNlogK)  SC:O(1)    lists中k个链表
     public ListNode mergeKLists(ListNode[] lists){
         if(lists==null || lists.length==0) return null;
