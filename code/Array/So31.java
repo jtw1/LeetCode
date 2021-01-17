@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 题解：https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-suan-fa-xiang-jie-si-lu-tui-dao-/
  * @date 2020/11/10 0010-9:35
  */
-public class Sol31 {
+public class So31 {
     public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("请输入数组长度：");
