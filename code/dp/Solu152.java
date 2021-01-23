@@ -1,5 +1,5 @@
 package LeetcodeTest;
-// [152] 乘积最大数组
+// [152] 乘积最大数组 2021 字节跳动面试题   以及力扣72
 // https://leetcode-cn.com/problems/maximum-product-subarray/
 public class Solu152 {
     public int maxProduct(int[] nums){
