@@ -3,7 +3,7 @@
  * https://leetcode-cn.com/problems/rotate-image/
  * @date 2020/12/19-14:51
  */
-public class Sol48 {
+public class Solu48 {
     public void rotate(int[][] matrix){
         //TC:O(n^2)  SC:O(1)
         int len=matrix.length;
