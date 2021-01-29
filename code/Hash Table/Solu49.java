@@ -5,7 +5,7 @@ import java.util.*;
  * https://leetcode-cn.com/problems/group-anagrams/
  * @date 2020/12/14 0014-9:39
  */
-public class Sol49 {
+public class Solu49 {
     /**
      *法一 排序    TC:O(nklogk)   SC:O(nk)     n 是strs中的字符串的数量，k是strs中的字符串的的最大长度
      * 使用哈希表存储每一组字母异位词，哈希表的键为一组字母异位词的标志，哈希表的值为一组字母异位词列表。
