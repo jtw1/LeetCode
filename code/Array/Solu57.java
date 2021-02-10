@@ -13,7 +13,7 @@ import java.util.List;
  * 对遍历到的区间[li,ri]:有三种情况
  *
  */
-public class Sol57 {
+public class Solu57 {
     public int[][] insert(int[][] intervals, int[] newInterval){
         //TC:O(n)   SC:O(1)
         // 列表里存的是要返回的结果数组的地址，最后只不过是把列表存储改成数组存储了，里面存的地址还是那些返回数组
