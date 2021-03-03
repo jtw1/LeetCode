@@ -29,6 +29,7 @@ public class Sol32 {
 
     //法二 栈   TC:O(n)  SC:O(n)
     public static int longestValidParentheses1(String s){
+        if(s==null || s.length()==0) return 0;
         int max=0;
         Stack<Integer> stack=new Stack<>();
         stack.push(-1);  //避免以“()”开头时出错
