@@ -63,6 +63,6 @@ public class Sol437 {
 
         // 4.回到本层，恢复状态，去除当前节点的前缀和数量
         prefixSumCount.put(curSum,prefixSumCount.get(curSum)-1);
-        return curSum;
+        return res;
     }
 }
