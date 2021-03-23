@@ -39,6 +39,7 @@ public class Sol4 {
         if(matrix==null) return false;
         boolean found=false;
         if(rows>0 && columns>0){
+            // 从右上角开始搜索可避免查找区域不唯一的情况
             int row=0;
             int column=columns-1;
             while(row<rows && column>=0){

@@ -38,4 +38,7 @@ public class Sol5 {
         }
         return newStr;
     }
+
+    //法二
+    // return s.replace(" ","%20");
 }
