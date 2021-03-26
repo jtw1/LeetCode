@@ -43,4 +43,21 @@ public class Sol41 {
          */
         return max.size()!=min.size()?max.peek():(max.peek()+min.peek())/2.0;
     }
+
+    /**
+     * 另一种写法
+     * public void addNum(int num) {
+     *         if(min.size()!=max.size()){
+     *             min.add(num);
+     *             max.add(min.poll());
+     *         }else if(min.size()==max.size()){
+     *             max.add(num);
+     *             min.add(max.poll());
+     *         }
+     *     }
+     *
+     *     public double findMedian() {
+     *         return min.size()==max.size()?(max.peek()+min.peek())/2.0:min.peek();
+     *     }
+     */
 }
