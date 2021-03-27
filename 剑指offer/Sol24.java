@@ -28,12 +28,13 @@ public class Sol24 {
     }
 
     // 递归  TC:O(n)  SC::O(n)
+    // https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/solution/dong-hua-yan-shi-duo-chong-jie-fa-206-fan-zhuan-li/
     public ListNode reverseList(ListNode head){
         if(head==null || head.next==null) return head;
 
         ListNode newHead=reverseList(head.next);
         head.next.next=head;
-        head.next=null;
+        head.next=null;  //防止出现环
         return newHead;
     }
 
