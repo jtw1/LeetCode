@@ -4,6 +4,7 @@
  * @date 2021/1/12 0012-11:04
  */
 public class Sol22 {
+    // 需要遍历1次链表
     public ListNode getKthFromEnd(ListNode head, int k) {
         if(head==null || k==0) return null;    //链表为空或k为0
         ListNode pAhead=head;
@@ -22,5 +23,19 @@ public class Sol22 {
             pBehind=pBehind.next;
         }
         return pBehind;
+    }
+    // 需要遍历2次链表
+    public ListNode getKthFromEnd1(ListNode head, int k) {
+        int len=0;
+        ListNode tmp=head;
+        while(tmp!=null){
+            len++;
+            tmp=tmp.next;
+        }
+        if(k>len) return head;
+        for(int i=0;i<len-k;i++){
+            head=head.next;
+        }
+        return head;
     }
 }

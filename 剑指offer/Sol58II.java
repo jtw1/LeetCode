@@ -10,4 +10,13 @@ public class Sol58II {
         res.append(s.substring(0,n));
         return res.toString();
     }
+
+    // 取余
+    public String reverseLeftWords1(String s, int n){
+        String res="";
+        for (int i = n; i < n + s.length(); i++) {
+            res += s.charAt(i%s.length());
+        }
+        return res;
+    }
 }
