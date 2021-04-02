@@ -10,6 +10,7 @@ public class Sol52 {
          * pA，pB分别从headA，headB出发，pA到尾节点之后，转为从headB出发，p到尾节点之后，转为从head出发A
          * 原理：pA第二次到q时，走过的距离为a+b+c,pB第二次到q时，走过的距离也是a+b+c，
          * 所以pA=pB时，他们就在公共节点
+         * 没有公共点时，pA,pB都是null
          */
         ListNode pA=headA;
         ListNode pB=headB;

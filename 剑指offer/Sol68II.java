@@ -11,8 +11,9 @@ public class Sol68II {
         TreeNode left = lowestCommonAncestor(root.left,p,q);
         // 在右子树中寻找最近公共节点
         TreeNode right= lowestCommonAncestor(root.right,p,q);
+        // if(left==null && right==null) return null; 这句可以不要，如果left,right同时为null，下面两句返回的也是null
         if(left==null) return right; //在左子树中未找到公共节点，返回右子节点
         if(right==null) return left;  //在右子树中未找到公共节点，返回左子节点
-        return root; //left!=null && right!=null情况，root即为公共祖先
+        return root; //left!=null && right!=null情况，只有一种可能 left=root,right=root  root即为公共祖先
     }
 }

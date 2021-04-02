@@ -23,6 +23,10 @@ public class Sol32I {
                 nodeDeque.add(node.right);
             }
         }
+        /**
+         * int[] arr1 = res.stream().mapToInt(Integer::valueOf).toArray();
+         */
+
         int[] ans=new int[res.size()];
         for (int i = 0; i < res.size(); i++) {
             ans[i]=res.get(i);
