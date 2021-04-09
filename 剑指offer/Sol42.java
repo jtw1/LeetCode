@@ -17,6 +17,7 @@ public class Sol42 {
     }
     //TC:O(n) SC:O(n)
     public int maxSubArray1(int[] nums) {
+        // dp[i] 代表以元素 nums[i] 为结尾的连续子数组最大和。
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
         int max = nums[0];

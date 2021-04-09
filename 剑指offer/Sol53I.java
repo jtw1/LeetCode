@@ -17,6 +17,18 @@ public class Sol53I {
         while(begin<=end){
             // + 的优先级大于 >>
             int mid=begin+((end-begin)>>1);
+
+//            if(nums[mid]==target){
+//                int tmp=mid;
+//                while(tmp>=0 && nums[tmp]==target){
+//                    tmp--;
+//                }
+//                while(mid<=nums.length-1 && nums[mid]==target){
+//                    mid++;
+//                }
+//                return mid-tmp-1;
+//            }
+
             if(nums[mid]==target){
                 count++;
                 int tmp=mid;
