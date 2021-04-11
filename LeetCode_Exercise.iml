@@ -33,6 +33,7 @@
       <sourceFolder url="file://$MODULE_DIR$/笔试题/Tencent" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/笔试题/字节跳动" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/笔试题/美团" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/笔试题" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
