@@ -33,6 +33,10 @@ public class Sol62 {
         for(int i=0;i<n;i++)
             list.add(i);
         int c=(m-1)%n;
+        /**
+         * 当前要删除的位置是c，下一个要删除的位置next是c+m,由于位置c的元素被删除了，所以在位置next的元素前移一位
+         * 并且数到末尾会从头继续数，最后需要取模，所以 next=(c+m-1)%list.size();
+         */
         while(list.size()!=1) {
             list.remove(c);
             c=(c+m-1)%list.size();
