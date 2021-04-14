@@ -1,11 +1,19 @@
 /**
  * @Description 56-II 数组中数字出现的次数
  * https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/
+ * https://www.cnblogs.com/MyStringIsNotNull/p/12585218.html
  * @date 2021/2/9-10:45
  */
 public class Sol56II {
     public int singleNumber(int[] nums) {
-        //有限状态机
+        /**
+         * 有限状态机
+         * 我们可以一次分析32bit的int的各个位在数组的各个数字中出现的次数。
+         * 实际上，我们只需要记录对应位出现的次数为0、1、2次的情况，
+         * 当对应位出现次数为3的时候，我们便可以将该位出现的次数置为0,重新开始进行计数。
+         * 由于int型中的各个二进制位出现的次数为3进制的，为此我们需要两个位来记录各个位出现的次数
+         * 由于是先计算 one ，因此应在新 one 的基础上计算 two 。
+         */
         int ones = 0, twos = 0;
         for(int num : nums){
             ones = ones ^ num & ~twos;
