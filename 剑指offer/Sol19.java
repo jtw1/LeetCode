@@ -28,6 +28,14 @@ public class Sol19 {
         return dp[sLen][pLen];
     }
 
+    /**
+     * 判断两个字符是否匹配,下标是从0开始的，p的第j个字符即p.charAt(j-1)
+     * @param s
+     * @param p
+     * @param i
+     * @param j
+     * @return
+     */
     public boolean isMatch(String s, String p,int i,int j){
         if (i==0) return false;
         if (p.charAt(j-1)=='.') return true;

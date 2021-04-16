@@ -46,7 +46,7 @@ public class Solu10 {
     }
 
     /**
-     * 判断s的第i个字符和p的第j个字符是否匹配
+     * 判断s的第i个字符和p的第j个字符是否匹配，下标是从0开始的，p的第j个字符即p.charAt(j-1)
      */
     public boolean isMatch(String s, String p,int i,int j){
         //上面再使用isMatch函数时，i等于0时，s指向的是空串，p不是，在这种情况下，只有p是空串或者p中*至少是交替出现时，dp[i][j]才可能为true

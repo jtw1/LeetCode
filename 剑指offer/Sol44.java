@@ -17,7 +17,7 @@ public class Sol44 {
             start *= 10;
             count = digit*start*9;
         }
-        long num=start+(n-1)/digit;
+        long num=start+(n-1)/digit;    //序列的第一位是0，所以n-1
         return Long.toString(num).charAt((n-1)%digit)-'0';
     }
 }
