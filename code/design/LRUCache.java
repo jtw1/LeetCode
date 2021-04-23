@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -9,6 +10,8 @@ import java.util.Map;
  * @date 2021/1/3-11:36
  */
 public class LRUCache {
+    LinkedHashMap linkedHashMap = new LinkedHashMap<>();
+    //双向链表
     class DLinkedNode {
         int key;
         int value;
@@ -21,7 +24,7 @@ public class LRUCache {
     private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
     private int size;
     private int capacity;
-    private DLinkedNode head, tail;
+    private DLinkedNode head, tail;  //虚拟头节点和虚拟尾节点
 
     public LRUCache(int capacity) {
         this.size = 0;
@@ -69,6 +72,9 @@ public class LRUCache {
     }
 
     private void addToHead(DLinkedNode node) {
+        //1.如果是新节点 newNode = 2
+        //之前： head ↔ 1 ↔ tail
+        //之后： head ↔ 2 ↔ 1 ↔ tail
         node.prev = head;
         node.next = head.next;
         head.next.prev = node;
@@ -81,7 +87,9 @@ public class LRUCache {
     }
 
     private void moveToHead(DLinkedNode node) {
+        //将node“移出来”
         removeNode(node);
+        //放到头节点；也就是伪头节点之后
         addToHead(node);
     }
 
