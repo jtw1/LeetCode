@@ -25,7 +25,7 @@ public class Sol188 {
             dp[i][1]=-prices[0];
         }
 
-        for (int i = 0; i < len; i++) {
+        for (int i = 1; i < len; i++) {
             for (int j = k; j >0 ; j--) {
                 //处理第k次买入
                 dp[j-1][1] = Math.max(dp[j-1][1], dp[j-1][0]-prices[i]);

@@ -21,4 +21,17 @@ public class Sol122 {
         }
         return cash;
     }
+    //贪心   因为交易次数不受限，如果可以把所有的上坡全部收集到，一定是利益最大化的
+    // 贪心算法只能用于计算最大利润，计算的过程并不是实际的交易过程。
+    public int maxProfit1(int[] prices){
+        if(prices==null || prices.length<2) return 0;
+        int ans=0;
+        for (int i = 1; i < prices.length; i++) {
+            // 卖出有利可图时
+            if(prices[i]>prices[i-1]){
+                ans += prices[i]-prices[i-1];
+            }
+        }
+        return ans;
+    }
 }

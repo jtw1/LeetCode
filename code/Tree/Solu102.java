@@ -32,3 +32,25 @@
 //         return list;
 //     }
 // }
+
+// DFS  递归
+//public List<List<Integer>> levelOrder(TreeNode root) {
+//        List<List<Integer>> res=new ArrayList<>();
+//        if(root==null) return res;
+//        dfs(root,1,res);
+//        return res;
+//        }
+//
+//private void dfs(TreeNode root,int level,List<List<Integer>> res){
+//        if(res.size()<level){
+//        res.add(new ArrayList<Integer>());
+//        }
+//        res.get(level-1).add(root.val);
+//
+//        if(root.left!=null){
+//        dfs(root.left,level+1,res);
+//        }
+//        if(root.right!=null){
+//        dfs(root.right,level+1,res);
+//        }
+//        }
