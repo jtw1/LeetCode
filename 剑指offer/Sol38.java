@@ -1,4 +1,6 @@
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -31,5 +33,44 @@ public class Sol38 {
             process(s,letter+tmp,visited);
             visited[i]=false;
         }
+    }
+
+    public static void main(String[] args) {
+        Sol38 sc=new Sol38();
+        String[] re=sc.permutation1("abc");
+    }
+
+    public String[] permutation1(String s) {
+        if(s==null || s.length()==0) return new String[0];
+        char[] sArr=s.toCharArray();
+        List<String> res=new LinkedList<>();
+        dfs(sArr,0,res);
+        String[] ans=new String[res.size()];
+        // int i=0;
+        // for(String str:res){
+        //     ans[i++]=str;
+        // }
+        return res.toArray(new String[res.size()]);
+    }
+
+    public void dfs(char[] s, int begin, List<String> res){
+        if(begin==s.length-1){
+            res.add(String.valueOf(s));
+            return;
+        }
+        HashSet<Character> set = new HashSet<>();
+        for(int i=begin;i<s.length;i++){
+            if(set.contains(s[i])) continue;
+            set.add(s[i]);
+            swap(s,i,begin);
+            dfs(s,begin+1,res);
+            swap(s,i,begin);
+        }
+    }
+
+    public void swap(char[] s,int a,int b){
+        char tmp=s[a];
+        s[a]=s[b];
+        s[b]=tmp;
     }
 }
