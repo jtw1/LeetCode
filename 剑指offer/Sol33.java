@@ -45,6 +45,8 @@ public class Sol33 {
              * 如果是右子节点，root就是他的某一个祖先节点，并且这个右子节点是这个祖先节点的一个左子树的一部分，所以不能超过他
              */
             if(postorder[i]>root) return false;
+            // 找postorder[i]的父节点  单调栈是递增排序的  在二叉搜索树的后序遍历中  当前值为postorder[i]，则它的父节点是 postorder[i+1:len-1]的所有值中大于postorder[i]的最小值
+            // 因为父节点是后序遍历中距离它最近的节点
             while(!stack.isEmpty() && stack.peek()>postorder[i]){
                 root=stack.pop();
             }

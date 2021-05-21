@@ -55,4 +55,42 @@ public class Sol494 {
         }
         return S>1000? 0:dp[S+1000];
     }
+
+    /**
+     * 01背包问题    dp
+     * https://leetcode-cn.com/problems/target-sum/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-58wvk/
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int findTargetSumWays2(int[] nums, int target) {
+        /**
+         * 设正数部分和为s(p),负数部分和为s(n),nums数组的和为sum
+         *           s(p)-s(n)=target
+         * s(p)+s(n)+s(p)-s(n)=target+s(p)+s(n)
+         * 2*s(p)=target+sum ==>  s(p)=(target+sum)/2
+         * 问题转化为在nums数组中，是否存在一组数字，使其和为   (target+sum)/2
+         */
+        int sum=0;
+        for(int num:nums){
+            sum += num;
+        }
+        // sum<target时，无论怎样分配正负号，都无法凑出结果为target的式子
+        if(sum<target || (sum+target)%2==1) return 0;
+
+        int w=(sum+target)/2;
+        // dp[i] 表示和为 i 的 num 组合有 dp[i] 种。
+        int[] dp=new int[w+1];
+        dp[0]=1;   // 和为0的组合只有一种，那就是一个都不选
+        for(int num:nums){
+            // 从后往前遍历是为了防止dp[i-num]被覆盖
+            for(int i=w;i>=num;i--){
+                // 每个num只用一次   等式右边的dp[i]代表之前没用num时，和为i的组合
+                // 对于元素之和等于 i - num 的每一种排列，在最后添加 num 之后即可得到一个元素之和等于 i 的排列，
+                // 因此在计算 dp[i] 时，应该计算所有的 dp[i − num] 之和。
+                dp[i]=dp[i]+dp[i-num];
+            }
+        }
+        return dp[w];
+    }
 }

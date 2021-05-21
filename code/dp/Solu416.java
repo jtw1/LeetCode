@@ -29,4 +29,25 @@ class Solution {
         }
         return dp[target];
     }
+
+
+    public boolean canPartition1(int[] nums) {
+        int sum=0;
+        for(int num:nums){
+            sum+=num;
+        }
+        if(sum%2!=0) return false;
+        int w=sum/2;
+        boolean[] dp=new boolean[w+1];    //dp[i]表示是否存在和为i的元素  存在为true    否则false
+        dp[0]=true;
+        for(int num:nums){
+            for(int i=w;i>=num;i--){
+                //dp[i-num]是上一轮得出的结果，为了防止被覆盖，所以i从后往前遍历，
+                // 这样每次计算dp[i]时，用的dp[i-num]都是上一轮的（即未更新的）
+                // 如果是从前往后遍历，用的dp[i-num]都是在这一轮更新过的，会产生错误
+                dp[i] = dp[i]||dp[i-num];
+            }
+        }
+        return dp[w];
+    }
 }
