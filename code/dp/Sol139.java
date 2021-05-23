@@ -24,4 +24,20 @@ public class Sol139 {
         }
         return dp[s.length()];
     }
+
+    // 完全背包问题 有序   s:背包      wordDict：物品
+    public boolean wordBreak1(String s, List<String> wordDict) {
+        if(s==null || s.length()==0) return true;
+        boolean[] dp=new boolean[s.length()+1];
+        dp[0]=true;
+        for(int i=1;i<=s.length();i++){
+            for(String tmp:wordDict){
+                int size=tmp.length();
+                if(i-size>=0 && tmp.equals(s.substring(i-size,i))){
+                    dp[i]=dp[i]||dp[i-size];
+                }
+            }
+        }
+        return dp[s.length()];
+    }
 }

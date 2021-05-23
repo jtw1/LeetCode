@@ -33,7 +33,8 @@ public class EffectiveBrackets {
         //     }
         //     return stack.size() == 1;
         // }
-        
+
+        // 2ms
         public static boolean isValid1(String s){
             if(s==null||s.length()==0) return true;
             if(s.length()%2==1)        return false;
@@ -51,4 +52,21 @@ public class EffectiveBrackets {
             }
             return true;
         }
+    // 60ms
+    public boolean isValid(String s) {
+        if(s==null || s.length()==0) return false;
+        if(s.length()%2==1) return false;
+        while(s.contains("()")||s.contains("[]")||s.contains("{}")){
+            if(s.contains("()")){
+                s=s.replace("()","");
+            }
+            if(s.contains("[]")){
+                s=s.replace("[]","");
+            }
+            if(s.contains("{}")){
+                s=s.replace("{}","");
+            }
+        }
+        return s.length()==0;
+    }
 }
