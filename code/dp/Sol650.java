@@ -26,7 +26,7 @@ public class Sol650 {
     public int minSteps(int n) {
         /**
          * n是素数时，只能复制一次，然后粘贴n-1次得到n个A，操作次数为n
-         * n不是素数时，假设n=i*j,可以先得到i个A，复制 1 次，然后再粘贴 j - 1 次，得到n个A
+         * n不是素数时，假设n=i*j,可以先得到i个A，复制 1 次，然后再粘贴 j - 1次，得到n个A
          *             操作次数为  minSteps(i)+1+j-1=minSteps(n/j)+j;
          */
         if(n==1) return 0;
