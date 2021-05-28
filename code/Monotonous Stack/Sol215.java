@@ -101,6 +101,27 @@ public class Sol215 {
         return j;
     }
 
+    // partition的另一种写法
+    private int partition1(int[] nums,int left,int right){
+        // randSwap(nums);
+        int pivot=nums[left];
+        int i=left+1,j=right;
+        while(true){
+            // 下标判断放前面，放后面的话  先对 nums[i]<=pivot 判断 可能会出现数组越界
+            // nums[i]<=pivot   nums[j]>=pivot  需要将等于的情况加入进去（当数组所有元素都相等时，以nums[left]作为哨兵元素，如果前两个判断条件没加等号，i，j都不变，造成死循环）
+            while(i<right && nums[i]<=pivot) i++;
+            while(j>left && nums[j]>=pivot) j--;
+
+            if(i>=j) break;
+            swap(nums,i,j);
+
+
+
+        }
+        swap(nums,left,j);
+        return j;
+    }
+
     private void swap(int[] nums, int a, int b) {
         int tmp=nums[a];
         nums[a]=nums[b];
